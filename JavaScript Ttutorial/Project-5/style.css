@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
+
+body{
+    background: url(2.jpg) no-repeat center center fixed;
+    background-size:cover;
+}
+
+
+h1{
+  text-align: center;
+  font-family: 'Palette Mosaic', cursive;
+  color: rgb(148, 148, 148);
+}
+
+
+h2{
+    text-align: center;
+    font-family: 'STIX Two Text', serif;
+}

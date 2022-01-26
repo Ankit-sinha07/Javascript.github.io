@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+.container{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 17px;
+}
+
+table{
+    margin:auto;
+}
+
+input{
+    font-size: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(15, 20, 20);
+}
+
+button{
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    width: 90px;
+    height: 45px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    box-shadow: 4px 3px 1px rgb(255, 255, 255);
+    
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.calculator{
+    display: inline-block;
+    height: 389px;
+    width: 460px;
+    background-color: black;
+    border-radius: 20px;
+}

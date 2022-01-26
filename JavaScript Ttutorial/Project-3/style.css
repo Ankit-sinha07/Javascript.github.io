@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+body{
+    background: url(1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+h3{
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 33px;
+}

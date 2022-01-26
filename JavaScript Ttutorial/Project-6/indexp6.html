@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Get/post Request webSite Project</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Get/Post Request Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="my-3">Get and Post Request</h1>
+        <hr />
+    </div>
+
+    <div class="container">
+        <!--URL Box-->
+        <div class="form-group row">
+            <label for="url" class="col-sm-2 col-form-label">URL</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="url" placeholder="Enter URL here">
+            </div>
+        </div>
+        <br />
+        <hr />
+        <!--Radios-->
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0" style="color: black; font-weight: bold">
+                    Request Type:-
+                </legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="requestType" id="get" value="GET" checked />
+                        <label class="form-check-label" for="get" style="font-weight: bold">
+                            GET REQUEST
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="requestType" id="post" value="POST" />
+                        <label class="form-check-label" for="post" style="font-weight: bold">
+                            POST REQUEST
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <hr />
+        <!--Content type box-->
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0" style="color: black; font-weight: bold">
+                    Content Type:-
+                </legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contentType" id="jsonRadio" value="jsonRadio"
+                            checked />
+                        <label class="form-check-label" for="json" style="font-weight: bold">
+                            JSON
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="contentType" id="paramsRadio"
+                            value="paramsRadio" />
+                        <label class="form-check-label" for="params" style="font-weight: bold">
+                            CUSTOM PARAMETERS
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <hr />
+        <!--Parametrs box - This will hide on Clicking json option in content type-->
+        <div id="parametersBox">
+            <div class="form-row">
+                <label for="url" class="col-sm-2 col-form-label" style="color: black; font-weight: bold">Parameter
+                    1:-</label>
+                <div class="col-md-4 box1">
+                    <input type="text" class="form-control" id="parameterkey" placeholder="Enter Parameter 1 Key" />
+                </div>
+                <br />
+                <div class="col-md-4 box2">
+                    <input type="text" class="form-control" id="parametervalue"
+                        placeholder="Enter Parameter 1 Value" />
+                </div>
+                <br />
+                <button id="addParam" class="btn btn-primary">+</button>
+            </div>
+            <div id="params"></div>
+        </div>
+        <hr />
+        <!--JSON Request box - This will Hide on clicking parameter in content type-->
+        <div class="my-3" id="requestJsonBox">
+            <div class="form-group row">
+                <label for="requestJsonText" class="col-sm-2 col-form-label"
+                    style="color: black; font-weight: bold">Enter Request Json:-</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="requestJsonText" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!--Submit button which will trigger fetch api-->
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button id="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+        <div class="my-3" id="responseJsonBox">
+            <div class="form-group row">
+                <label for="responseJsonText" class="col-sm-2 col-form-label"
+                    style="color: black; font-weight: bold">Responce:-</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="responseJsonText" rows="3"
+                        placeholder="Your responce will appear here"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="index.js"></script>
+</body>
+
+</html>

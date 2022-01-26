@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+    background: url(2.jpg) no-repeat center center fixed;
+    background-size:cover;
+}
+
+div>h1{
+    color: rgb(30, 49, 223);
+    font-family: 'Style Script', cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+label{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+small{
+    font-weight: 600;
+}

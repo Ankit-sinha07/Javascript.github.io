@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+body{
+    background: url(2.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 26px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 50px;
+}
+.table{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.alert{
+    background-color: rgb(25, 116, 63);
+}

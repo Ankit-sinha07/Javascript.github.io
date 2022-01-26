@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+h1{
+    font-family: 'Otomanopee One', sans-serif; 
+    color: rgb(58 58 58);  
+}
+
+body{
+    background: url(1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#cards{
+    position: absolute;
+    left: 16%;
+    background: #8080805c;
+}
